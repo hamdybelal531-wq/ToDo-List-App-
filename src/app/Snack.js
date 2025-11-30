@@ -1,15 +1,12 @@
 import React, { createContext, useState } from "react";
 import { Snackbar } from "@mui/material";
 
-// إنشاء الـ context
 export const SnackContext = createContext();
 
-// الـ Provider نفسه
 export function SnackProvider({ children }) {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
 
-  // دالة تفتح الـ Snackbar
   const showSnack = (msg) => {
     setMessage(msg);
     setOpen(true);
@@ -23,7 +20,6 @@ export function SnackProvider({ children }) {
     <SnackContext.Provider value={{ showSnack }}>
       {children}
 
-      {/* Snackbar نفسه */}
       <Snackbar
         open={open}
         onClose={handleClose}
@@ -31,8 +27,7 @@ export function SnackProvider({ children }) {
         message={message}
         sx={{
           "& .MuiSnackbarContent-root": {
-            backgroundColor: "", // لون الخلفية
-            color: "white", // لون النص
+            backgroundColor: "",
             fontWeight: "bold",
             borderRadius: "10px",
           },

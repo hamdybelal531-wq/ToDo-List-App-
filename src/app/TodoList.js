@@ -21,12 +21,8 @@ import { useContext } from "react";
 export const todos = [];
 
 // array Tasks
-// uuidv4();
-// #5F5F5F
 export default function TodoList() {
-  //
   const { state, dispatch } = useContext(ReducerContext);
-  //
   const [ChoseShowArray, SetShowArray] = useState("all");
   const [inputState, SetinputState] = useState("");
   const [openId, setOpenId] = useState(null);
@@ -132,7 +128,7 @@ export default function TodoList() {
         <DialogActions>
           <Button
             onClick={() => {
-              setEditeState(null); //  يقفل البوباب عند الإلغاء
+              setEditeState(null);
             }}
           >
             Cancel
@@ -238,7 +234,7 @@ export default function TodoList() {
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   handlclick();
-                  showSnack("Add Is Succefull"); // نفس الدالة اللي بتضيف العنصر
+                  showSnack("Add Is Succefull");
                 }
               }}
               onChange={(e) => {

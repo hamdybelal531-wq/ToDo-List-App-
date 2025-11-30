@@ -9,9 +9,9 @@ import { ProviderReducer } from "./provider";
 
 const theme = createTheme({
   palette: {
-    mode: "light", // أو "dark"
+    mode: "light",
     primary: {
-      main: "#5F5F5F", // اللون الأساسى
+      main: "#5F5F5F",
     },
     secondary: {
       main: "#9c27b0",
